@@ -14,7 +14,7 @@ The app uses [MovieDB API](https://www.themoviedb.org/documentation/api) API to 
 Put yout api key in api/APIClient.
 
 ```java
-public class APIClient implements RequestInterceptor {<br/>
-    public static  final String API_KEY="your api key";<br/>
+public class APIClient implements RequestInterceptor {
+    public static  final String API_KEY="your api key";
 ...
 ```
