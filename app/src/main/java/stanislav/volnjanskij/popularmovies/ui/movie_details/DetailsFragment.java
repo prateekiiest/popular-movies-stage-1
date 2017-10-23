@@ -1,6 +1,5 @@
 package stanislav.volnjanskij.popularmovies.ui.movie_details;
 
-
 import android.app.Activity;
 import android.app.LoaderManager;
 import android.content.AsyncTaskLoader;
@@ -27,12 +26,9 @@ import stanislav.volnjanskij.popularmovies.api.MovieModel;
  * A simple {@link Fragment} subclass.
  */
 public class DetailsFragment extends Fragment implements LoaderManager.LoaderCallbacks<MovieModel> {
-
-
     private View rootView;
     @Bind(R.id.title)
     TextView titleView;
-
     @Bind(R.id.poster)
     ImageView posterImageView;
     private MovieModel movie;
@@ -44,13 +40,11 @@ public class DetailsFragment extends Fragment implements LoaderManager.LoaderCal
     TextView overviewView;
     @Bind(R.id.runtime)
     TextView runtimeView;
-
     boolean detailsLoaded=false;
 
     public DetailsFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -66,13 +60,10 @@ public class DetailsFragment extends Fragment implements LoaderManager.LoaderCal
             runtimeView.setText(String.valueOf(movie.getRuntime()) + "min");
             yearView.setText(movie.getReleaseYear());
             detailsLoaded=true;
-
         }
-
         titleView.setText(movie.getTitle());
         overviewView.setText(movie.getOverview());
         Picasso.with(getActivity()).load(movie.getCachedPosterPath()).placeholder(R.drawable.notification_template_icon_bg).into(posterImageView);
-
         return rootView;
     }
 
@@ -92,11 +83,9 @@ public class DetailsFragment extends Fragment implements LoaderManager.LoaderCal
 
     @Override
     public Loader<MovieModel> onCreateLoader(int id, Bundle args) {
-
         MovieLoader loader = new MovieLoader(getActivity());
         loader.setId(movie.getId());
         return loader;
-
     }
 
     @Override
@@ -111,13 +100,10 @@ public class DetailsFragment extends Fragment implements LoaderManager.LoaderCal
         ratingView.setText(data.getVoteAvarage() + "/10");
         runtimeView.setText(String.valueOf(data.getRuntime()) + "min");
         yearView.setText(data.getReleaseYear());
-
-
     }
 
     @Override
     public void onLoaderReset(Loader<MovieModel> loader) {
-
     }
 
     @Override
@@ -127,13 +113,11 @@ public class DetailsFragment extends Fragment implements LoaderManager.LoaderCal
     }
 
     static class MovieLoader extends AsyncTaskLoader<MovieModel> {
-
         String id;
-
         public void setId(String id) {
             this.id = id;
         }
-
+        
         public MovieLoader(Context context) {
             super(context);
         }
@@ -146,7 +130,5 @@ public class DetailsFragment extends Fragment implements LoaderManager.LoaderCal
                 return null;
             }
         }
-
     }
-
 }
