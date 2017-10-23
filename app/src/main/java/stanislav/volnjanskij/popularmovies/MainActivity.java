@@ -12,10 +12,7 @@ import stanislav.volnjanskij.popularmovies.ui.movie_details.DetailsActivity;
 import stanislav.volnjanskij.popularmovies.ui.movies_list.MoviesListFragment;
 import stanislav.volnjanskij.popularmovies.ui.settings.SettingsActivity;
 
-
 public class MainActivity extends AppCompatActivity implements MoviesListFragment.Callback {
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +21,6 @@ public class MainActivity extends AppCompatActivity implements MoviesListFragmen
         ButterKnife.bind(this);
         MoviesListFragment fragment= (MoviesListFragment) getFragmentManager().findFragmentById(R.id.movie_list);
         fragment.setCallback(this);
-
-
     }
 
     @Override
