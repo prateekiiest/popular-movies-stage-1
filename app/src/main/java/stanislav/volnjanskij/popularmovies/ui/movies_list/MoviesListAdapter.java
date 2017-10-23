@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-
 import java.util.List;
 
 import stanislav.volnjanskij.popularmovies.R;
@@ -47,7 +46,6 @@ public class MoviesListAdapter extends ArrayAdapter<MovieModel> {
         viewHolder.image.setMinimumHeight(imageHeight);
         viewHolder.image.setMinimumWidth(imageWidth);
         Picasso.with(getContext()).load(movie.getCachedPosterPath()).into(viewHolder.image);
-
         return convertView;
     }
 
@@ -72,7 +70,5 @@ public class MoviesListAdapter extends ArrayAdapter<MovieModel> {
         }else{
             this.imageWidth=185;
         }
-
     }
-
 }
