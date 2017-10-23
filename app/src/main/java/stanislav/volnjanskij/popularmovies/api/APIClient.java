@@ -16,15 +16,17 @@ public class APIClient implements RequestInterceptor {
     public static final String BASE_URL="https://api.themoviedb.org/3";
     private static APIMethods api;
     private static APIClient instance;
+    
     private APIClient() {
-
     }
+    
     public static  APIClient getInstance(){
         if (instance==null){
             instance=new APIClient();
         }
         return instance;
     }
+    
     private APIMethods getApi(){
         if (api==null){
             RestAdapter restAdapter = new RestAdapter.Builder()
@@ -32,19 +34,21 @@ public class APIClient implements RequestInterceptor {
                     .setEndpoint(APIClient.BASE_URL)
                     .setLogLevel(RestAdapter.LogLevel.FULL)
                     .build();
-
             api=restAdapter.create(APIMethods.class);
         }
         return api;
     }
+    
     @Override
     public void intercept(RequestFacade request) {
         request.addQueryParam(APIClient.KEY_PARAM,APIClient.API_KEY);
     }
+    
     public List<MovieModel> getPopular(){
         ListResponse result=getApi().getPopular();
         return  result.getResults();
     }
+    
     public List<MovieModel> getTopRated(){
         ListResponse result=getApi().getTopRated();
         return  result.getResults();
