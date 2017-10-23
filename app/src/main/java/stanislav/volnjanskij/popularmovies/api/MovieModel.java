@@ -13,7 +13,6 @@ public class MovieModel implements Parcelable {
     public static final Parcelable.Creator<MovieModel> CREATOR = new Parcelable.Creator<MovieModel>() {
 
         public MovieModel createFromParcel(Parcel in) {
-
             return new MovieModel(in);
         }
 
@@ -21,6 +20,7 @@ public class MovieModel implements Parcelable {
             return new MovieModel[size];
         }
     };
+    
     private String overview;
     private String title;
     @SerializedName("poster_path")
@@ -34,7 +34,6 @@ public class MovieModel implements Parcelable {
     private String cachedPosterPath;
 
     public MovieModel() {
-
     }
 
     // parcel construtor
@@ -133,6 +132,4 @@ public class MovieModel implements Parcelable {
         dest.writeInt(runtime);
         dest.writeString(cachedPosterPath);
     }
-
-
 }

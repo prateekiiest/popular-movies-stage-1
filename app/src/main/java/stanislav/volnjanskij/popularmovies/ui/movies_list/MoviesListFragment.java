@@ -39,9 +39,7 @@ import stanislav.volnjanskij.popularmovies.api.MovieModel;
  */
 public class MoviesListFragment extends Fragment implements
         LoaderManager.LoaderCallbacks<List<MovieModel>>{
-
     MovieModel[] data;
-
 
     /**
      * The fragment's ListView/GridView.
@@ -68,15 +66,11 @@ public class MoviesListFragment extends Fragment implements
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-
-
-
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -124,19 +118,14 @@ public class MoviesListFragment extends Fragment implements
                     mAdapter.addAll(data);
                     mAdapter.notifyDataSetChanged();
                 }
-
-
             }
         });
-
-
         return rootView;
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-
     }
 
     @Override
@@ -166,15 +155,14 @@ public class MoviesListFragment extends Fragment implements
 
     @Override
     public void onLoaderReset(Loader<List<MovieModel>> loader) {
-
     }
 
     public interface Callback {
         // TODO: Update argument type and name
         public void movieSelected(MovieModel movie);
     }
+        
     public static class MovieLoader extends AsyncTaskLoader<List<MovieModel>> {
-
         public MovieLoader(Context context) {
             super(context);
         }
@@ -182,7 +170,6 @@ public class MoviesListFragment extends Fragment implements
         @Override
         public List<MovieModel> loadInBackground() {
             try {
-
                 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
                 String order = prefs.getString("sort_order", "");
                 if (order.equals("top_rated")) {
@@ -191,11 +178,9 @@ public class MoviesListFragment extends Fragment implements
                     return APIClient.getInstance().getPopular();
                 }
             }catch (Exception ex){
-
                 return new ArrayList<MovieModel>();
             }
         }
-
     }
 
     public void setCallback(Callback callback) {
