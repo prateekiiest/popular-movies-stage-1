@@ -1,4 +1,4 @@
-package stanislav.volnjanskij.popularmovies;
+package chanda.prateek.popularmovies;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,10 +7,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import butterknife.ButterKnife;
-import stanislav.volnjanskij.popularmovies.api.MovieModel;
-import stanislav.volnjanskij.popularmovies.ui.movie_details.DetailsActivity;
-import stanislav.volnjanskij.popularmovies.ui.movies_list.MoviesListFragment;
-import stanislav.volnjanskij.popularmovies.ui.settings.SettingsActivity;
+import chanda.prateek.popularmovies.api.MovieModel;
+import chanda.prateek.popularmovies.ui.movie_details.DetailsActivity;
+import chanda.prateek.popularmovies.ui.movies_list.MoviesListFragment;
+import chanda.prateek.popularmovies.ui.settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity implements MoviesListFragment.Callback {
 
