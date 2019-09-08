@@ -1,4 +1,4 @@
-package stanislav.volnjanskij.popularmovies.api;
+package chanda.prateek.popularmovies.api;
 
 import java.util.List;
 
