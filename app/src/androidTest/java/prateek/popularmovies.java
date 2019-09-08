@@ -1,5 +1,5 @@
 
-package stanislav.volnjanskij.popularmovies;
+package chanda.prateek.popularmovies;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
