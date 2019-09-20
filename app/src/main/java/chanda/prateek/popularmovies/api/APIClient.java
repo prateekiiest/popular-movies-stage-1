@@ -45,13 +45,13 @@ public class APIClient implements RequestInterceptor {
     }
     
     public List<MovieModel> getPopular(){
-        ListResponse result=getApi().getPopular();
-        return  result.getResults();
+        ListResponse popular_result=getApi().getPopular();
+        return  popular_result.getResults();
     }
     
     public List<MovieModel> getTopRated(){
-        ListResponse result=getApi().getTopRated();
-        return  result.getResults();
+        ListResponse toprated_result=getApi().getTopRated();
+        return  toprated_result.getResults();
     }
 
     public MovieModel getMovieDetails(String id) {
