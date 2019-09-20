@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements MoviesListFragmen
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // when the activity is created
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements MoviesListFragmen
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            // create an explicit intent to go for settings activity
             Intent intent=new Intent(this,SettingsActivity.class);
             startActivity(intent);
             return true;
