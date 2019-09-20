@@ -1,10 +1,10 @@
-package stanislav.volnjanskij.popularmovies.ui.settings;
+package chanda.prateek.popularmovies.ui.settings;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import stanislav.volnjanskij.popularmovies.R;
+import chanda.prateek.popularmovies.R;
 
 public class SettingsActivity extends ActionBarActivity {
 

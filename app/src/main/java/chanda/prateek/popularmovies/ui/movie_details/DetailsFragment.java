@@ -1,4 +1,4 @@
-package stanislav.volnjanskij.popularmovies.ui.movie_details;
+package chanda.prateek.popularmovies.ui.movie_details;
 
 import android.app.Activity;
 import android.app.LoaderManager;
@@ -18,13 +18,11 @@ import com.squareup.picasso.Picasso;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import stanislav.volnjanskij.popularmovies.R;
-import stanislav.volnjanskij.popularmovies.api.APIClient;
-import stanislav.volnjanskij.popularmovies.api.MovieModel;
+import chanda.prateek.popularmovies.R;
+import chanda.prateek.popularmovies.api.APIClient;
+import chanda.prateek.popularmovies.api.MovieModel;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class DetailsFragment extends Fragment implements LoaderManager.LoaderCallbacks<MovieModel> {
     private View rootView;
     @Bind(R.id.title)

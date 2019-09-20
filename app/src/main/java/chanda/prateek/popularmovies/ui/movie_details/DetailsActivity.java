@@ -1,11 +1,11 @@
-package stanislav.volnjanskij.popularmovies.ui.movie_details;
+package chanda.prateek.popularmovies.ui.movie_details;
 
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import stanislav.volnjanskij.popularmovies.R;
+import chanda.prateek.popularmovies.R;
 
 public class DetailsActivity extends AppCompatActivity {
     Bundle params;

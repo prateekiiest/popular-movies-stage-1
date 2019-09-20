@@ -1,10 +1,10 @@
-package stanislav.volnjanskij.popularmovies.ui.settings;
+package chanda.prateek.popularmovies.ui.settings;
 
 import android.os.Bundle;
 import android.app.Fragment;
 import android.preference.PreferenceFragment;
 
-import stanislav.volnjanskij.popularmovies.R;
+import chanda.prateek.popularmovies.R;
 
 /**
  * A simple {@link Fragment} subclass.

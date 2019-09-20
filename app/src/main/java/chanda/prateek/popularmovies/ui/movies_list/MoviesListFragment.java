@@ -1,4 +1,4 @@
-package stanislav.volnjanskij.popularmovies.ui.movies_list;
+package chanda.prateek.popularmovies.ui.movies_list;
 
 import android.app.Activity;
 import android.app.LoaderManager;
@@ -24,19 +24,12 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import stanislav.volnjanskij.popularmovies.R;
+import chanda.prateek.popularmovies.R;
 
-import stanislav.volnjanskij.popularmovies.api.APIClient;
-import stanislav.volnjanskij.popularmovies.api.MovieModel;
+import chanda.prateek.popularmovies.api.APIClient;
+import chanda.prateek.popularmovies.api.MovieModel;
 
-/**
- * A fragment representing a list of Items.
- * <p/>
- * Large screen devices (such as tablets) are supported by replacing the ListView
- * with a GridView.
- * <p/>
- * interface.
- */
+
 public class MoviesListFragment extends Fragment implements
         LoaderManager.LoaderCallbacks<List<MovieModel>>{
     MovieModel[] data;

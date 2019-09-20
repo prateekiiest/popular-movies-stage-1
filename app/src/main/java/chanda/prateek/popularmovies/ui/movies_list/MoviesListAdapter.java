@@ -1,4 +1,4 @@
-package stanislav.volnjanskij.popularmovies.ui.movies_list;
+package chanda.prateek.popularmovies.ui.movies_list;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,12 +12,11 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import stanislav.volnjanskij.popularmovies.R;
-import stanislav.volnjanskij.popularmovies.api.MovieModel;
+import chanda.prateek.popularmovies.R;
+import chanda.prateek.popularmovies.api.MovieModel;
 
-/**
- * Created by Stas on 21.07.15.
- */
+
+
 public class MoviesListAdapter extends ArrayAdapter<MovieModel> {
     private int imageHeight;
 
@@ -66,9 +65,9 @@ public class MoviesListAdapter extends ArrayAdapter<MovieModel> {
         }else if(imageWidth>500){
             this.imageWidth = 500;
         }else if (imageWidth>300){
-            this.imageWidth=342;
+            this.imageWidth=355;
         }else{
-            this.imageWidth=185;
+            this.imageWidth=165;
         }
     }
 }

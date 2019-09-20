@@ -2,7 +2,7 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context="stanislav.volnjanskij.popularmovies.ui.movie_details.DetailsFragment">
+                tools:context="chanda.prateek.popularmovies.ui.movie_details.DetailsFragment">
 
 	<ScrollView
 		android:layout_width="match_parent"
@@ -68,8 +68,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_below="@id/poster"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="10dp"
+				android:layout_marginLeft="12dp"
+				android:layout_marginRight="14dp"
 				android:text=""/>
 		</RelativeLayout>
 	</ScrollView>

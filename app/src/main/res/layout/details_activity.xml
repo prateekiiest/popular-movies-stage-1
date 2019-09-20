@@ -3,7 +3,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/container"
-                tools:context="stanislav.volnjanskij.popularmovies.ui.movie_details.DetailsActivity">
+                tools:context="chanda.prateek.popularmovies.ui.movie_details.DetailsActivity">
 
 
 
